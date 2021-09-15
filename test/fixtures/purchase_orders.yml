@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: purchase_orders
+#
+#  id           :bigint           not null, primary key
+#  is_paid      :boolean
+#  number       :string
+#  ordered_at   :datetime
+#  total_amount :money
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  supplier_id  :bigint           not null
+#
+# Indexes
+#
+#  index_purchase_orders_on_supplier_id  (supplier_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (supplier_id => suppliers.id)
+#
+
+one:
+  number: MyString
+  ordered_at: 2021-09-15 10:55:57
+  is_paid: false
+  total_amount: 
+  supplier: one
+
+two:
+  number: MyString
+  ordered_at: 2021-09-15 10:55:57
+  is_paid: false
+  total_amount: 
+  supplier: two
